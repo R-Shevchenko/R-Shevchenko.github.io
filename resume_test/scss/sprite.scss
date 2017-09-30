@@ -1,0 +1,137 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+*/
+$college-icon-x: 0px;
+$college-icon-y: 0px;
+$college-icon-offset-x: 0px;
+$college-icon-offset-y: 0px;
+$college-icon-width: 74px;
+$college-icon-height: 71px;
+$college-icon-total-width: 178px;
+$college-icon-total-height: 1062px;
+$college-icon-image: '../img/sprite.png';
+$college-icon: 0px 0px 0px 0px 74px 71px 178px 1062px '../img/sprite.png';
+$designing-icon-x: 0px;
+$designing-icon-y: 73px;
+$designing-icon-offset-x: 0px;
+$designing-icon-offset-y: -73px;
+$designing-icon-width: 173px;
+$designing-icon-height: 133px;
+$designing-icon-total-width: 178px;
+$designing-icon-total-height: 1062px;
+$designing-icon-image: '../img/sprite.png';
+$designing-icon: 0px 73px 0px -73px 173px 133px 178px 1062px '../img/sprite.png';
+$habitat-icon-x: 0px;
+$habitat-icon-y: 208px;
+$habitat-icon-offset-x: 0px;
+$habitat-icon-offset-y: -208px;
+$habitat-icon-width: 178px;
+$habitat-icon-height: 133px;
+$habitat-icon-total-width: 178px;
+$habitat-icon-total-height: 1062px;
+$habitat-icon-image: '../img/sprite.png';
+$habitat-icon: 0px 208px 0px -208px 178px 133px 178px 1062px '../img/sprite.png';
+$music-icon-x: 0px;
+$music-icon-y: 343px;
+$music-icon-offset-x: 0px;
+$music-icon-offset-y: -343px;
+$music-icon-width: 131px;
+$music-icon-height: 131px;
+$music-icon-total-width: 178px;
+$music-icon-total-height: 1062px;
+$music-icon-image: '../img/sprite.png';
+$music-icon: 0px 343px 0px -343px 131px 131px 178px 1062px '../img/sprite.png';
+$school-icon-x: 0px;
+$school-icon-y: 476px;
+$school-icon-offset-x: 0px;
+$school-icon-offset-y: -476px;
+$school-icon-width: 74px;
+$school-icon-height: 75px;
+$school-icon-total-width: 178px;
+$school-icon-total-height: 1062px;
+$school-icon-image: '../img/sprite.png';
+$school-icon: 0px 476px 0px -476px 74px 75px 178px 1062px '../img/sprite.png';
+$tea-icon-x: 0px;
+$tea-icon-y: 553px;
+$tea-icon-offset-x: 0px;
+$tea-icon-offset-y: -553px;
+$tea-icon-width: 155px;
+$tea-icon-height: 141px;
+$tea-icon-total-width: 178px;
+$tea-icon-total-height: 1062px;
+$tea-icon-image: '../img/sprite.png';
+$tea-icon: 0px 553px 0px -553px 155px 141px 178px 1062px '../img/sprite.png';
+$traveling-icon-x: 0px;
+$traveling-icon-y: 696px;
+$traveling-icon-offset-x: 0px;
+$traveling-icon-offset-y: -696px;
+$traveling-icon-width: 177px;
+$traveling-icon-height: 142px;
+$traveling-icon-total-width: 178px;
+$traveling-icon-total-height: 1062px;
+$traveling-icon-image: '../img/sprite.png';
+$traveling-icon: 0px 696px 0px -696px 177px 142px 178px 1062px '../img/sprite.png';
+$university-icon-x: 0px;
+$university-icon-y: 840px;
+$university-icon-offset-x: 0px;
+$university-icon-offset-y: -840px;
+$university-icon-width: 115px;
+$university-icon-height: 84px;
+$university-icon-total-width: 178px;
+$university-icon-total-height: 1062px;
+$university-icon-image: '../img/sprite.png';
+$university-icon: 0px 840px 0px -840px 115px 84px 178px 1062px '../img/sprite.png';
+$watching-icon-x: 0px;
+$watching-icon-y: 926px;
+$watching-icon-offset-x: 0px;
+$watching-icon-offset-y: -926px;
+$watching-icon-width: 127px;
+$watching-icon-height: 136px;
+$watching-icon-total-width: 178px;
+$watching-icon-total-height: 1062px;
+$watching-icon-image: '../img/sprite.png';
+$watching-icon: 0px 926px 0px -926px 127px 136px 178px 1062px '../img/sprite.png';
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}

@@ -1,0 +1,170 @@
+@media (max-width: 499px) {
+  html {
+    font-size: 6px;
+  }
+
+  .photo {
+    text-align: center;
+  }
+
+  .education-icons {
+    
+    .school,
+    .college,
+    .university {
+      display: none;
+    }
+  }
+
+  .names {
+    font-size: $font-size-small !important;
+  }
+
+  .col {
+    width: 100% !important;
+  }
+
+  .hobbies {
+    .arrow-descroption {
+      h6 {
+        width: 100% !important;
+      }
+      svg {
+        display: none;
+      }
+    }
+    section {
+      flex-direction: column;
+      div {
+        div {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 500px) and (max-width: 799px) {
+  html {
+    font-size: 8px;
+  }
+
+  .photo {
+    text-align: center;
+  }
+
+  .education-icons {
+    
+    .school,
+    .college,
+    .university {
+      display: none;
+    }
+  }
+
+  .names {
+    font-size: $font-size-small !important;
+  }
+
+  .col {
+    width: 100% !important;
+  }
+
+  .hobbies {
+    .arrow-descroption {
+      h6 {
+        width: 100% !important;
+      }
+      svg {
+        display: none;
+      }
+    }
+    section {
+      flex-direction: column;
+      div {
+        div {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1299px) {
+  html {
+    font-size: 12px;
+  }
+
+  .photo {
+    text-align: center;
+  }
+
+  .experiens-and-info {
+    
+    .col {
+    width: 45% !important;
+
+      .personal-info {
+        
+        div {
+          flex-direction: column;
+
+          p {
+            margin: 0.05em 0;
+          }
+
+          .names {
+            width: 50% !important;
+          }
+
+          .values {
+            width: 100% !important;
+          }
+        }
+      }
+    }
+  }
+
+  .skills {
+    .col {
+      width: 28% !important;
+      
+      section {
+        
+        div {
+          align-items: center;
+        }
+      }
+
+      h6 {
+        text-align: center;
+        padding: 0;
+      }
+    }
+  }
+
+  .hobbies {
+
+    .arrow-descroption {
+      svg {
+        display: none;
+      }
+    }
+
+    section {
+      justify-content: flex-start !important;
+      div {
+        margin-right: 2em;
+      }
+      .hobbie-icons {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 1300px) and (max-width: 1439px) {
+  html {
+    font-size: 14px;
+  }
+}

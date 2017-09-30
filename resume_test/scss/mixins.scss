@@ -1,0 +1,59 @@
+@import 'variables';
+
+@mixin font-names {
+  font-family: $regular-font;
+  font-size: $font-size-primal;
+  color: $color-primal;
+}
+
+@mixin font-values {
+  font-family: $regular-font-light;
+  font-size: $font-size-small;
+  color: $color-primal;
+}
+
+@mixin font-titles {
+  font-family: $title-font-regular;
+  font-size: $font-size-primal;
+  color: $color-contrast;
+}
+
+@mixin full {
+  stroke-width: 0.1em;
+  stroke: $color-border;
+  fill: $color-border;
+}
+
+@mixin empty {
+  stroke-width: 0.1em;
+  stroke: $color-border;
+  fill: $color-contrast;
+}
+
+@mixin progress_5of5 {
+  circle {
+    @include full;
+  }
+}
+
+@mixin progress_4of5 {
+  circle {
+    @include full;
+  }
+
+  circle:last-child {
+    @include empty;
+  }
+
+}
+
+@mixin progress_3of5 {
+  circle {
+    @include full;
+  }
+
+  circle:nth-child(4),
+  circle:nth-child(5) {
+    @include empty;
+  }
+}
