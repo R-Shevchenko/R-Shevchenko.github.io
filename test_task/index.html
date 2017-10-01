@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Weather Forecast</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  <script src="js/date.js"></script>
+  <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+  <script src="https://www.amcharts.com/lib/3/serial.js"></script>
+  <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+  <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+  <script src="js/script.js"></script>
+  <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-between search">
+      <p>Forecast</p>
+      <input type="text" name="city" id="city" class="form-control"   placeholder="City">
+    </div>
+    <div class="row forecast-header">
+      <div id="current-day"></div>
+      <div id="error"></div>
+    </div>
+    <div class="row justify-content-center forecast-header">
+      <div id="current-forecast"></div>
+    </div>
+    <div class="row justify-content-center forecaster">
+      <div class="col-6" id="current-forecast-details"></div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
+          <div class="carousel-inner">
+            <div class="carousel-item active" id="chart-temp1">
+              <p class="description-for-diagrams">Temperature, &deg;C</p>
+              <div id="chartdiv-temperature"></div>
+            </div>
+            <div class="carousel-item" id="chart-temp2">
+              <p class="description-for-diagrams">Wind speed, m/s</p>
+              <div id="chartdiv-wind"></div>
+            </div>
+            <div class="carousel-item" id="chart-temp3">
+              <p class="description-for-diagrams">Pressure, hPa</p>
+              <div id="chartdiv-pressure"></div>
+            </div>
+            <div class="carousel-item" id="chart-temp4">
+              <p class="description-for-diagrams">Humidity, %</p>
+              <div id="chartdiv-humidity"></div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators"    role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators"    role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
